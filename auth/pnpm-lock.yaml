@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@types/express': ^4.17.11
   express: ^4.17.1
+  express-async-errors: ^3.1.1
   express-validator: ^6.11.1
   ts-node-dev: ^1.1.6
   typescript: ^4.2.4
@@ -10,6 +11,7 @@ specifiers:
 dependencies:
   '@types/express': 4.17.11
   express: 4.17.1
+  express-async-errors: 3.1.1_express@4.17.1
   express-validator: 6.11.1
   ts-node-dev: 1.1.6_typescript@4.2.4
   typescript: 4.2.4
@@ -279,6 +281,14 @@ packages:
   /etag/1.8.1:
     resolution: {integrity: sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=}
     engines: {node: '>= 0.6'}
+    dev: false
+
+  /express-async-errors/3.1.1_express@4.17.1:
+    resolution: {integrity: sha512-h6aK1da4tpqWSbyCa3FxB/V6Ehd4EEB15zyQq9qe75OZBp0krinNKuH4rAY+S/U/2I36vdLAUFSjQJ+TFmODng==}
+    peerDependencies:
+      express: ^4.16.2
+    dependencies:
+      express: 4.17.1
     dev: false
 
   /express-validator/6.11.1:
