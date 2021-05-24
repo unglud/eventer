@@ -46,3 +46,33 @@ it("should return 400 missing fields", async () => {
     })
     .expect(400);
 });
+
+it("should disallow duplicate emails", async () => {
+  await request(app)
+    .post("/api/users/signup")
+    .send({
+      email: "test@test.com",
+      password: "password",
+    })
+    .expect(201);
+
+  await request(app)
+    .post("/api/users/signup")
+    .send({
+      email: "test@test.com",
+      password: "password",
+    })
+    .expect(400);
+});
+
+it("should sets cookie after sign up", async () => {
+  const response = await request(app)
+    .post("/api/users/signup")
+    .send({
+      email: "test@test.com",
+      password: "password",
+    })
+    .expect(201);
+
+  expect(response.get("Set-Cookie")).toBeDefined();
+});
