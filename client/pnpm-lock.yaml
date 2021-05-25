@@ -1,11 +1,13 @@
 lockfileVersion: 5.3
 
 specifiers:
+  bootstrap: ^5.0.1
   next: ^10.2.3
   react: ^17.0.2
   react-dom: ^17.0.2
 
 dependencies:
+  bootstrap: 5.0.1
   next: 10.2.3_react-dom@17.0.2+react@17.0.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -220,6 +222,12 @@ packages:
 
   /bn.js/5.2.0:
     resolution: {integrity: sha512-D7iWRBvnZE8ecXiLj/9wbxH7Tk79fAh8IHaTNq1RWRixsS02W+5qS+iE9yq6RYl0asXx5tw0bLhmT5pIfbSquw==}
+    dev: false
+
+  /bootstrap/5.0.1:
+    resolution: {integrity: sha512-Fl79+wsLOZKoiU345KeEaWD0ik8WKRI5zm0YSPj2oF1Qr+BO7z0fco6GbUtqjoG1h4VI89PeKJnMsMMVQdKKTw==}
+    peerDependencies:
+      '@popperjs/core': ^2.9.2
     dev: false
 
   /braces/3.0.2:
