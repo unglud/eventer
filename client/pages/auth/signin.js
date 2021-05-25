@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { useRequest } from '../../hooks/use-request';
+import { useRequest } from "../../hooks/use-request";
 import Router from "next/router";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { doRequest, errors } = useRequest({
-    url: "/api/users/signup",
+    url: "/api/users/signin",
     method: "post",
     body: { email, password },
     onSuccess: () => Router.push("/"),
@@ -40,7 +40,7 @@ const Signup = () => {
       </div>
       {errors}
 
-      <button className="btn btn-primary">Sign Up</button>
+      <button className="btn btn-primary">Sign In</button>
     </form>
   );
 };
