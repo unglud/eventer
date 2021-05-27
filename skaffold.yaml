@@ -17,6 +17,15 @@ build:
           - src: 'src/**/*.ts'
             dest: .
 
+    - image: unglued/tickets
+      context: tickets
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
+
     - image: unglued/client
       context: client
       docker:
